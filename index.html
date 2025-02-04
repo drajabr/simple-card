@@ -16,7 +16,7 @@
             --color-btn-1: linear-gradient(135deg, #ff0000, #ff6347);
             --color-btn-2: linear-gradient(135deg, #0b3d1b, #1e7a45);
             --glow-color: rgba(27, 27, 27, 0.5);
-            --max-width: 600px;
+            --max-width: 500px;
         }
         * {
             margin: 0;
@@ -48,9 +48,9 @@
             justify-content: space-around;
             align-items: center;
             height: 100%;
-            max-height: 90vh;
             min-height: fit-content;
-            max-height: 800px;
+            max-height: calc(2*var(--max-width));  
+            max-width: var(--max-width); 
         }
         .buttons {
             display: flex;
@@ -73,7 +73,7 @@
             cursor: pointer;
             transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
             width: 100%;
-            max-width: 400px;
+            max-width: calc(var(--max-width) - 2rem); 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         .btn img {
@@ -86,8 +86,8 @@
         }
         .profile-pic {
             width: min(60%, 30vh);
-            max-width: 300px;
-            max-height: 300px;
+            max-width: calc(var(--max-width) - 3rem); 
+            max-width: calc(var(--max-width) - 3rem); 
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid var(--secondary-color);
