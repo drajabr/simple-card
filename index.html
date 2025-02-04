@@ -7,15 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #14532d; /* Dark Green */
-            --secondary-color: #ff6347; /* Tomato */
+            --primary-color: #14532d;
+            --secondary-color: #ff6347;
             --text-color: #ffffff;
-            --background-color: #292929; /* Darker background */
-            --card-background: linear-gradient(135deg, #2c2f2c, #5c5f5c); /* Enhanced gradient */
+            --background-color: #292929;
+            --card-background: linear-gradient(135deg, #2c2f2c, #5c5f5c);
             --button-hover-brightness: 1.2;
-            --color-btn-1: linear-gradient(135deg, #ff0000, #ff6347); /* Enhanced gradient */
-            --color-btn-2: linear-gradient(135deg, #0b3d1b, #1e7a45); /* Enhanced gradient */
+            --color-btn-1: linear-gradient(135deg, #ff0000, #ff6347);
+            --color-btn-2: linear-gradient(135deg, #0b3d1b, #1e7a45);
             --glow-color: rgba(27, 27, 27, 0.5);
+            --max-width: 600px;
         }
         * {
             margin: 0;
@@ -30,23 +31,25 @@
             align-items: center;
             color: var(--text-color);
             height: 100vh;
-            margin: 0;
-            padding: 20px;
+            padding: 1rem;
         }
         .card {
             background: var(--card-background);
-            width: calc(100% - 40px);
-            height: calc(100% - 40px);
-            padding: 2rem;
+            width: 100%;
+            max-width: var(--max-width);
+            padding: 1rem;
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 20px var(--glow-color);
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
+            height: 100%;
+            max-height: 90vh;
             min-height: fit-content;
+            max-height: 800px;
         }
         .buttons {
             display: flex;
@@ -58,31 +61,32 @@
         .btn {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 0.75rem 1.5rem;
+            justify-content: flex-start;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
             border: none;
             border-radius: 10px;
             text-decoration: none;
             color: var(--text-color);
-            font-size: 1rem;
+            font-size: calc(1rem + 1vw);
             cursor: pointer;
             transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
             width: 100%;
-            max-width: 300px;
+            max-width: 400px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         .btn img {
-            width: 20px;
-            height: 20px;
+            width: 2rem;
+            height: 2rem;
         }
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 30px var(--glow-color);
         }
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            width: min(50%, 50vh);
+            max-width: 300px;
+            max-height: 300px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid var(--secondary-color);
@@ -97,12 +101,12 @@
             margin: 1rem 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             font-family: 'Lobster', cursive;
-            font-size: 2rem;
+            font-size: calc(2.5rem + 2vw);
         }
         p {
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-            font-size: 1rem;
+            font-size: calc(1.25rem + 1vw);
         }
         .instagram {
             background: var(--color-btn-1);
