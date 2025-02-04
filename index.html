@@ -8,15 +8,15 @@
     <style>
         :root {
             --primary-color: #14532d; /* Dark Green */
-            --secondary-color: rgb(0, 146, 0); /* Dark Red */
+            --secondary-color: #ff6347; /* Tomato */
             --text-color: #ffffff;
-            --background-color: #1b1b1b;
-            --card-background: #2e332e;
+            --background-color: #292929; /* Darker background */
+            --card-background: linear-gradient(135deg, #2c2f2c, #5c5f5c); /* Enhanced gradient */
             --button-hover-brightness: 1.2;
-            --color-btn-1: #8b1c1c; /* Dark Green */
-            --color-btn-2: #176335; /* Dark Red */
-            --glow-color: rgba(3, 3, 3, 0.2);
-            --default-zoom: 1.5;
+            --color-btn-1: linear-gradient(135deg, #ff0000, #ff6347); /* Enhanced gradient */
+            --color-btn-2: linear-gradient(135deg, #0b3d1b, #1e7a45); /* Enhanced gradient */
+            --glow-color: rgba(27, 27, 27, 0.5);
+            zoom:1.5
         }
         * {
             margin: 0;
@@ -25,18 +25,23 @@
             font-family: 'Poppins', Arial, sans-serif;
         }
         body {
-            background: linear-gradient(135deg, #1b1b1b, #333);
+            background: var(--background-color);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             color: var(--text-color);
         }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Prevent scrollbars */
+        }
         .card {
             background: var(--card-background);
             width: 90%;
             max-width: 400px;
-            padding: 40px;
+            padding:  40px 20px 40px 20px;
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 20px var(--glow-color);
@@ -53,7 +58,7 @@
             object-fit: cover;
             border: 5px solid var(--secondary-color);
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 0 10px var(--glow-color);
+            box-shadow: 0 0 30px var(--glow-color);
         }
         .profile-pic:hover {
             transform: scale(1.1);
@@ -62,12 +67,13 @@
         h1 {
             margin: 10px 0 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            font-family: 'Lobster', cursive;
+            font-family: 'bellaboo', cursive;
+            font-size: 400%;
         }
         p {
             margin-bottom: 30px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-            font-family: 'Lobster', cursive;
+            font-family: 'sans-serif', cursive;
         }
         .buttons {
             display: flex;
