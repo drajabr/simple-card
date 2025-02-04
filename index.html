@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Profile Card</title>
+    <style>
+        :root {
+            --primary-color: #14532d; /* Dark Green */
+            --secondary-color: #7f1d1d; /* Dark Red */
+            --text-color: #ffffff;
+            --background-color: #1b1b1b;
+            --card-background: #2e2e2e;
+            --button-hover-opacity: 0.8;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: var(--background-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: var(--text-color);
+        }
+        .card {
+            background: var(--card-background);
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 30%;
+            object-fit: cover;
+            border: 5px solid var(--secondary-color);
+        }
+        h1 {
+            margin: 20px 0 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 16px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            width: 80%;
+            max-width: 300px;
+        }
+        .instagram {
+            background: var(--secondary-color);
+        }
+        .whatsapp {
+            background: var(--primary-color);
+        }
+        .btn:hover {
+            opacity: var(--button-hover-opacity);
+        }
+        .btn img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="/Assets/logo.png" alt="Rasa Gaza" class="profile-pic">
+        <h1>Rasa Gaza</h1>
+        <p>Authentic taste made with love 💖</p>
+        <div class="buttons">
+            <a href="https://instagram.com" class="btn instagram">
+                <img src="/Assets/ig.svg" alt="Instagram"> Follow us on Instagram
+            </a>
+            <a href="https://wa.me/your-number" class="btn whatsapp">
+                <img src="/Assets/wa.svg" alt="WhatsApp"> Order in WhatsApp
+            </a>
+        </div>
+    </div>
+</body>
+</html>
