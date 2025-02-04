@@ -16,7 +16,6 @@
             --color-btn-1: linear-gradient(135deg, #ff0000, #ff6347); /* Enhanced gradient */
             --color-btn-2: linear-gradient(135deg, #0b3d1b, #1e7a45); /* Enhanced gradient */
             --glow-color: rgba(27, 27, 27, 0.5);
-            zoom:1.25
         }
         * {
             margin: 0;
@@ -30,20 +29,52 @@
             justify-content: center;
             align-items: center;
             color: var(--text-color);
-        }
-        html, body {
-            width: 100%;
-            height: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
         }
         .card {
             background: var(--card-background);
-            width: 90%;
-            max-width: 400px;
-            padding:  40px 20px 40px 20px;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            padding: 2rem;
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 20px var(--glow-color);
             transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: fit-content;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .btn img {
+            width: 20px;
+            height: 20px;
         }
         .card:hover {
             transform: translateY(-10px);
@@ -52,7 +83,7 @@
         .profile-pic {
             width: 150px;
             height: 150px;
-            border-radius: 100%;
+            border-radius: 50%;
             object-fit: cover;
             border: 5px solid var(--secondary-color);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -63,43 +94,15 @@
             box-shadow: 0 0 20px var(--glow-color);
         }
         h1 {
-            margin: 10px 0 10px;
+            margin: 1rem 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            font-family: 'bellaboo', cursive;
-            font-size: 400%;
+            font-family: 'Lobster', cursive;
+            font-size: 2rem;
         }
         p {
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-            font-family: 'sans-serif', cursive;
-        }
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 15px 35px;
-            border: none;
-            border-radius: 10px;
-            text-decoration: none;
-            color: var(--text-color);
-            font-size: 14px;
-            cursor: pointer;
-            transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
-            width: 80%;
-            max-width: 300px;
-            position: relative;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        .btn span {
-            flex: 1;
-            text-align: center;
+            font-size: 1rem;
         }
         .instagram {
             background: var(--color-btn-1);
@@ -111,12 +114,6 @@
             filter: brightness(var(--button-hover-brightness));
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-        }
-        .btn img {
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            left: 20px;
         }
     </style>
 </head>
